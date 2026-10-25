@@ -32,10 +32,10 @@ Skill 是一份可复用的任务方法，写清楚何时使用、需要什么�
 
 ### 1. 让 AI 帮你安装
 
-下载并解压本发行包，将文件夹交给能读写本地文件的 AI 助手，然后复制这段话：
+下载或克隆本仓库，将包含 `SKILL.md`、`references/` 和 `examples/` 的根目录交给能读写本地文件的 AI 助手，然后复制这段话：
 
 ~~~text
-请从我提供的 nuwa-research-skills 文件夹中，
+请从我提供的 nuwa-science-skill 仓库根目录中，
 将 examples/literature-review 完整安装到当前项目的
 .agents/skills/literature-review/。
 
@@ -49,11 +49,11 @@ Skill 是一份可复用的任务方法，写清楚何时使用、需要什么�
 <details>
 <summary>手动安装，以及安装女娲和其他例子</summary>
 
-将需要的**完整目录**复制到当前项目的 `.agents/skills/` 下，保持技能名称与目录名一致：
+女娲元 skill 的入口是仓库根目录的 `SKILL.md`；专业例子的入口是各自目录中的 `SKILL.md`。按需要将完整仓库或单个例子复制到当前项目的 `.agents/skills/` 下：
 
-| 想用的能力 | 从发行包中复制 | 复制到当前项目 |
+| 想用的能力 | 从仓库中复制 | 复制到当前项目 |
 |---|---|---|
-| 创建和改进科研 skill | `huashu-nuwa/` | `.agents/skills/huashu-nuwa/` |
+| 创建和改进科研 skill | 整个仓库目录，安装时命名为 `huashu-nuwa` | `.agents/skills/huashu-nuwa/` |
 | 文献调研 | `examples/literature-review/` | `.agents/skills/literature-review/` |
 | 其他专业例子 | `examples/对应技能名/` | `.agents/skills/对应技能名/` |
 
@@ -67,7 +67,9 @@ Skill 是一份可复用的任务方法，写清楚何时使用、需要什么�
         │   ├── SKILL.md
         │   ├── README.md
         │   ├── LICENSE
-        │   └── references/
+        │   ├── references/
+        │   ├── assets/
+        │   └── examples/         # 随仓库附带的专业例子
         └── literature-review/
             ├── SKILL.md
             ├── LICENSE
@@ -75,7 +77,7 @@ Skill 是一份可复用的任务方法，写清楚何时使用、需要什么�
             └── references/
 ~~~
 
-本发行包的根目录是资料与技能的集合；安装单位是上表中的各个技能目录。只复制一个 `SKILL.md` 会遗漏它引用的方法文件。保留已有同名技能的备份时，请放在技能扫描目录之外。
+仓库名为 `nuwa-science-skill`，女娲在 `SKILL.md` 中声明的技能名仍为 `huashu-nuwa`，因此上表使用后者作为安装目录名。安装女娲时保留完整仓库；只使用某个专业例子时，复制 `examples/` 下的对应完整目录即可。只复制一个 `SKILL.md` 会遗漏它引用的方法文件。保留已有同名技能的备份时，请放在技能扫描目录之外。
 
 Codex 的本地发现与调用方式见 [OpenAI 官方技能文档](https://learn.chatgpt.com/docs/build-skills)：项目技能位于 `.agents/skills/`；CLI 或 IDE 扩展可用 `$` 选择技能，匹配的任务也可触发自动选择。新技能没有出现时可重启 Codex。
 
@@ -121,7 +123,7 @@ Codex 的本地发现与调用方式见 [OpenAI 官方技能文档](https://lear
 
 专业例子负责完成相应科研任务。**女娲负责设计、创建、组合和改进这些能力。**
 
-安装 [huashu-nuwa](huashu-nuwa/SKILL.md) 后，可以这样开始：
+安装 [huashu-nuwa](SKILL.md) 后，可以这样开始：
 
 ~~~text
 请用女娲，把“研究变量与测量口径核对”做成可复用的科研 skill。
@@ -154,7 +156,7 @@ Codex 的本地发现与调用方式见 [OpenAI 官方技能文档](https://lear
 | 从一个解释走向可检验方案 | 假设与证伪 → 研究设计 | 竞争解释、差异预期、测量与判定条件 |
 | 把已有结果整理成可靠表述 | 复现与结果核验 → 证据审查 → 学术写作 | 实际产物、核验结果、结论范围与未决问题 |
 
-方案制定、首次执行和复核已有结果是不同的工作。需要真实实验或计算时，另行明确执行步骤、材料与资源；已有执行授权时继续推进。方案、结果或目标改变后，更新受到影响的下游判断。组合细节见 [交接与回路](huashu-nuwa/references/composition-handoff.md)。
+方案制定、首次执行和复核已有结果是不同的工作。需要真实实验或计算时，另行明确执行步骤、材料与资源；已有执行授权时继续推进。方案、结果或目标改变后，更新受到影响的下游判断。能力组合的设计说明见 [能力方向与组合](references/capability-map.md)。
 
 <a id="method"></a>
 ## 一份方法，怎样成为可复用能力？
@@ -165,10 +167,10 @@ Codex 的本地发现与调用方式见 [OpenAI 官方技能文档](https://lear
 
 女娲的参考文档解释了这一过程：
 
-- [能力方向](huashu-nuwa/references/capability-map.md)：怎样拆解需求、复用和组合能力。
-- [来源与数据](huashu-nuwa/references/sources-and-data.md)：构建 skill 与运行 skill 分别需要什么资料。
-- [提炼与检验](huashu-nuwa/references/extraction-framework.md)：怎样保留方法依据、迁移前提和失效边界。
-- [专业 skill 模板](huashu-nuwa/references/skill-template.md)：怎样把设计写成可执行的技能文件。
+- [能力方向](references/capability-map.md)：怎样拆解需求、复用和组合能力。
+- [来源与数据](references/sources-and-data.md)：构建 skill 与运行 skill 分别需要什么资料。
+- [提炼与检验](references/extraction-framework.md)：怎样保留方法依据、迁移前提和失效边界。
+- [专业 skill 模板](references/skill-template.md)：怎样把设计写成可执行的技能文件。
 
 例子中的 `references/methods.md` 进一步区分原始方法、工作流改编和验证状态。研究中的临时结论留在任务材料中，有复用价值的方法才进入 skill。
 
@@ -203,49 +205,46 @@ Codex 的本地发现与调用方式见 [OpenAI 官方技能文档](https://lear
 ## 发行包里有什么
 
 ~~~text
-nuwa-research-skills/
-├── README.md                    # 从这里开始
+nuwa-science-skill/
+├── README.md                    # 项目介绍、安装与使用说明
+├── SKILL.md                     # 女娲元 skill 入口
 ├── LICENSE
 ├── assets/
 │   └── hero.svg                 # README 封面
-├── huashu-nuwa/                 # 女娲元 skill，可独立安装
-│   ├── SKILL.md
-│   ├── README.md
-│   ├── LICENSE
-│   └── references/              # 5 份设计与方法参考
-├── examples/                    # 12 个完整专业 skill
-│   ├── README.md                # 逐例起步请求与检查点
-│   ├── literature-review/
-│   ├── literature-synthesis/
-│   ├── research-cross-review/
-│   ├── research-question-discovery/
-│   ├── research-novelty-check/
-│   ├── concept-theory-synthesis/
-│   ├── research-evidence-audit/
-│   ├── hypothesis-falsification/
-│   ├── research-design/
-│   ├── research-reproduction/
-│   ├── scholarly-writing/
-│   └── research-roadmapping/
-└── docs/
-    └── communication-design.md  # 面向维护者的传播设计与介绍文案
+├── references/                  # 女娲的 4 份设计与方法参考
+│   ├── capability-map.md        # 科研能力方向与组合
+│   ├── extraction-framework.md  # 方法提炼与检验
+│   ├── skill-template.md        # 专业科研 skill 模板
+│   └── sources-and-data.md      # 来源与数据指引
+└── examples/                    # 12 个完整专业 skill
+    ├── README.md                # 逐例起步请求与检查点
+    ├── literature-review/
+    ├── literature-synthesis/
+    ├── research-cross-review/
+    ├── research-question-discovery/
+    ├── research-novelty-check/
+    ├── concept-theory-synthesis/
+    ├── research-evidence-audit/
+    ├── hypothesis-falsification/
+    ├── research-design/
+    ├── research-reproduction/
+    ├── scholarly-writing/
+    └── research-roadmapping/
 ~~~
 
-每个专业例子含 `SKILL.md`、`references/`、`agents/openai.yaml` 和 `LICENSE`。发行包不包含本地备份、私人研究材料、账户配置或历史评估工作目录。
+根目录的 `SKILL.md` 与 `references/` 组成女娲元 skill；`examples/` 下的 12 个目录分别是专业 skill。每个专业例子含 `SKILL.md`、`references/`、`agents/openai.yaml` 和 `LICENSE`。发行包不包含本地备份、私人研究材料、账户配置或历史评估工作目录。
 
 <a id="license"></a>
 ## 来源与许可
 
-女娲元 skill 基于 **Huashu（花叔）** 的 [nuwa-skill](https://github.com/alchaincyf/nuwa-skill) 改编，技能标识保留为 `huashu-nuwa`，当前元 skill 元数据版本为 **3.1.2**。本包将其整理为面向科研能力构建的独立改编版，并加入 12 个专业科研例子。
+女娲元 skill 基于 **Huashu（花叔）** 的 [nuwa-skill](https://github.com/alchaincyf/nuwa-skill) 改编，技能标识保留为 `huashu-nuwa`，元 skill 的版本以 [SKILL.md](SKILL.md) 中的 `metadata.version` 为准。本包将其整理为面向科研能力构建的独立改编版，并加入 12 个专业科研例子。
 
 上游项目也为本 README 的场景展示和低门槛入口提供了编排参考。作者署名和上游链接用于说明来源；本包不代表上游的官方发行或维护承诺。
 
 采用 [MIT 许可](LICENSE)，保留上游版权与许可文本。每个可独立复制的技能目录均附有许可文件。参考文档中的外部链接用于定位来源，外部论文、网页和数据并未随包重新分发。
 
-维护者可参阅 [传播设计与介绍文案](docs/communication-design.md)。
-
 ---
 
 **从一个真实研究问题开始，把有用的方法留下来。**
 
-[选择一个专业例子](examples/README.md) · [打开女娲元 skill](huashu-nuwa/SKILL.md)
+[选择一个专业例子](examples/README.md) · [打开女娲元 skill](SKILL.md)
