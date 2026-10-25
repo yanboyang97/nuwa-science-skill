@@ -1,0 +1,3 @@
+interface:
+  display_name: "研究交叉评议"
+  short_description: "在可比条件下交叉检查研究主张与证据，识别支持、冲突、互补及未决分歧"

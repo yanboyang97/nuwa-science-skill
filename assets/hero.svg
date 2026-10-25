@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="500" viewBox="0 0 1280 500" role="img" aria-labelledby="title desc">
+<title id="title">女娲 · 科研技能工坊</title>
+<desc id="desc">把科研方法变成可复用的能力。一个女娲元 skill，十二个专业科研例子。右侧的十二个节点表示可独立使用的例子。</desc>
+<rect width="1280" height="500" rx="24" fill="#f5f2e9"/>
+<path d="M0 462H1280" stroke="#dedbd1"/>
+<g font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif">
+<rect x="60" y="48" width="266" height="40" rx="20" fill="#e7e7dc"/>
+<text x="80" y="75" font-size="18" fill="#36493d" font-weight="600">NUWA / RESEARCH SKILLS</text>
+<text x="60" y="182" font-size="62" fill="#213b35" font-weight="700">把科研方法</text>
+<text x="60" y="267" font-size="62" fill="#213b35" font-weight="700">变成可复用的能力</text>
+<rect x="63" y="296" width="74" height="5" rx="2.5" fill="#b65b32"/>
+<text x="61" y="353" font-size="24" fill="#506257">从文献到问题，从证据到行动。</text>
+<text x="61" y="404" font-size="23" fill="#213b35" font-weight="600">1 个元 skill <tspan fill="#a2a697"> / </tspan>12 个专业科研例子</text>
+<text x="61" y="487" font-size="14" letter-spacing="2" fill="#68766b">女娲 · 科研技能工坊</text>
+<text x="1215" y="487" text-anchor="end" font-size="14" letter-spacing="2" fill="#68766b">READ · QUESTION · CHECK · CREATE</text>
+</g>
+<g transform="translate(1000 242)">
+<circle r="156" fill="#edece2"/>
+<circle r="130" fill="none" stroke="#cdd1c5" stroke-width="1.5" stroke-dasharray="3 8"/>
+<path d="M0.00 -65.00L0.00 -130.00" stroke="#bfc7b7" stroke-width="1.5"/><circle cx="0.00" cy="-130.00" r="18" fill="#b65b32" stroke="#b65b32" stroke-width="1.5"/>
+<path d="M32.50 -56.29L65.00 -112.58" stroke="#bfc7b7" stroke-width="1.5"/><circle cx="65.00" cy="-112.58" r="18" fill="#faf9f3" stroke="#9caa98" stroke-width="1.5"/>
+<path d="M56.29 -32.50L112.58 -65.00" stroke="#bfc7b7" stroke-width="1.5"/><circle cx="112.58" cy="-65.00" r="18" fill="#faf9f3" stroke="#9caa98" stroke-width="1.5"/>
+<path d="M65.00 0.00L130.00 0.00" stroke="#bfc7b7" stroke-width="1.5"/><circle cx="130.00" cy="0.00" r="18" fill="#b65b32" stroke="#b65b32" stroke-width="1.5"/>
+<path d="M56.29 32.50L112.58 65.00" stroke="#bfc7b7" stroke-width="1.5"/><circle cx="112.58" cy="65.00" r="18" fill="#faf9f3" stroke="#9caa98" stroke-width="1.5"/>
+<path d="M32.50 56.29L65.00 112.58" stroke="#bfc7b7" stroke-width="1.5"/><circle cx="65.00" cy="112.58" r="18" fill="#faf9f3" stroke="#9caa98" stroke-width="1.5"/>
+<path d="M0.00 65.00L0.00 130.00" stroke="#bfc7b7" stroke-width="1.5"/><circle cx="0.00" cy="130.00" r="18" fill="#b65b32" stroke="#b65b32" stroke-width="1.5"/>
+<path d="M-32.50 56.29L-65.00 112.58" stroke="#bfc7b7" stroke-width="1.5"/><circle cx="-65.00" cy="112.58" r="18" fill="#faf9f3" stroke="#9caa98" stroke-width="1.5"/>
+<path d="M-56.29 32.50L-112.58 65.00" stroke="#bfc7b7" stroke-width="1.5"/><circle cx="-112.58" cy="65.00" r="18" fill="#faf9f3" stroke="#9caa98" stroke-width="1.5"/>
+<path d="M-65.00 0.00L-130.00 0.00" stroke="#bfc7b7" stroke-width="1.5"/><circle cx="-130.00" cy="0.00" r="18" fill="#b65b32" stroke="#b65b32" stroke-width="1.5"/>
+<path d="M-56.29 -32.50L-112.58 -65.00" stroke="#bfc7b7" stroke-width="1.5"/><circle cx="-112.58" cy="-65.00" r="18" fill="#faf9f3" stroke="#9caa98" stroke-width="1.5"/>
+<path d="M-32.50 -56.29L-65.00 -112.58" stroke="#bfc7b7" stroke-width="1.5"/><circle cx="-65.00" cy="-112.58" r="18" fill="#faf9f3" stroke="#9caa98" stroke-width="1.5"/>
+<circle r="65" fill="#213b35"/>
+<text text-anchor="middle" y="2" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="32" font-weight="600" fill="#faf9f3">女娲</text>
+<text text-anchor="middle" y="30" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="17" fill="#cbd8c2">元 skill</text>
+</g>
+</svg>

@@ -1,0 +1,3 @@
+interface:
+  display_name: "研究空白与新颖性核查"
+  short_description: "对照最接近的已有工作核查研究贡献，区分实际差别、证据缺口与未检出"

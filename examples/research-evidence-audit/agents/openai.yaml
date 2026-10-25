@@ -1,0 +1,3 @@
+interface:
+  display_name: "证据、方法与因果审查"
+  short_description: "按具体研究主张核查证据与方法，识别偏差、因果边界和必要修正"

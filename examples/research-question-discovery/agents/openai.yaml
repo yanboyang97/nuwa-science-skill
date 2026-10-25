@@ -1,0 +1,3 @@
+interface:
+  display_name: "科研问题发现"
+  short_description: "从证据矛盾、解释缺口和失效边界形成值得研究且能够回答的候选问题"

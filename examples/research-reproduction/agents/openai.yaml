@@ -1,0 +1,3 @@
+interface:
+  display_name: "复现与结果核验"
+  short_description: "核对研究数据、代码、环境与结果，记录实际执行范围并定位复现差异"

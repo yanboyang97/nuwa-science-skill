@@ -1,0 +1,3 @@
+interface:
+  display_name: "假设、反例与可证伪性"
+  short_description: "提出竞争假设、核验有效反例，并明确能够区分解释或改变判断的证据"
